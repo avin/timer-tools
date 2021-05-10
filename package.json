@@ -1,0 +1,51 @@
+{
+  "name": "timer-tools",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+  "module": "dist/main.mjs",
+  "types": "dist/main.d.ts",
+  "author": "Avin Lambrero",
+  "license": "MIT",
+  "files": [
+    "/dist",
+    "README.md"
+  ],
+  "keywords": [
+    "timer",
+    "wait",
+    "sleep",
+    "settimeout",
+    "setinterval",
+    "promise"
+  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avin/timer-tools.git"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx",
+    "prebuild": "npm run clean",
+    "build": "rollup -c",
+    "prepublish": "npm run build",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.0.2",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "esbuild": "^0.11.20",
+    "eslint": "^7.26.0",
+    "jest": "^26.6.3",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.47.0",
+    "rollup-plugin-dts": "^3.0.1",
+    "rollup-plugin-esbuild": "^4.2.3",
+    "ts-jest": "^26.5.6",
+    "typescript": "^4.2.4"
+  }
+}
